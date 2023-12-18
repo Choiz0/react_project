@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2d42;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  text-align: center;
+  color: #edf2f4;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #8d99ae;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ef233c;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo {
+    order: -1;
+    flex: 0 1 auto;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.page {
+  width: 90%;
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  background-color: lightgrey;
+}
+
+/* bookslist */
+/* 전체 카드 컨테이너 스타일링 */
+.card {
+  width: 400px; /* 카드의 너비를 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드에 그림자 효과를 추가 */
+  border-radius: 5px; /* 카드 모서리를 둥글게 */
+  display: flex; /* 플렉스박스 레이아웃을 사용 */
+  flex-direction: row; /* 요소들을 가로로 정렬 */
+  position: relative; /* 하위 요소의 절대 위치를 설정하기 위한 기준 */
+  transition: transform 0.3s ease-in-out; /* 호버 효과를 위한 변환 */
+  margin: 20px; /* 카드 간격 */
+  background: #fff; /* 카드 배경색 */
+}
+/* 카드 호버 효과 */
+.card:hover {
+  transform: translateY(-5px); /* 카드를 약간 위로 이동 */
+}
+
+/* 카드 내 이미지 스타일링 */
+.card img {
+  width: 100px; /* 이미지의 너비를 설정 */
+  height: 150px; /* 이미지의 높이를 자동으로 설정하여 비율 유지 */
+  position: relative; /* 이미지를 절대 위치로 설정 */
+  top: -30px;
+  left: -10px;
+  border-top-left-radius: 5px; /* 이미지 왼쪽 상단 모서리를 둥글게 */
+  border-bottom-left-radius: 5px; /* 이미지 왼쪽 하단 모서리를 둥글게 */
+}
+
+/* 책 정보 부분 스타일링 */
+.bookinfo {
+  padding: 10px; /* 내부 여백 추가 */
+  flex-grow: 1; /* 남은 공간을 채움 */
+  display: flex; /* 플렉스박스 레이아웃을 사용 */
+  flex-direction: column; /* 요소들을 세로로 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+}
+/* 책 제목 스타일링 */
+.bookinfo .title {
+  font-size: 1rem; /* 제목의 글자 크기 설정 */
+  margin: 0.5rem 0; /* 제목의 상하 여백 설정 */
+}
+
+/* 책 저자 스타일링 */
+.bookinfo .authors {
+  font-size: 0.8rem; /* 저자 글자 크기 설정 */
+  color: #555; /* 저자 글자 색상 설정 */
+}
+
+/* 상세 정보 버튼 스타일링 */
+.bookinfo .btn {
+  background: #00a4e4; /* 버튼 배경색 */
+  color: #fff; /* 버튼 글자색 */
+  text-decoration: none; /* 텍스트 밑줄 제거 */
+  padding: 10px 20px; /* 버튼 패딩 */
+  display: inline-block; /* 버튼을 인라인 블록 요소로 설정 */
+  margin-top: 10px; /* 버튼 상단 여백 추가 */
+  border-radius: 5px; /* 버튼 모서리 둥글게 */
+  transition: background 0.3s; /* 배경색 변화에 대한 전환 효과 */
+}
+
+/* 버튼 호버 효과 */
+.bookinfo .btn:hover {
+  background: #007bbd; /* 호버 시 버튼 배경색 변경 */
+}
+.cardlist {
+  display: flex; /* 플렉스박스 레이아웃을 사용 */
+  flex-wrap: wrap; /* 요소들이 컨테이너를 넘어가면 다음 줄로 넘김 */
+  justify-content: space-around; /* 카드 사이에 공간을 동일하게 배분 */
+  align-items: flex-start; /* 카드를 위쪽으로 정렬 */
+
+}
