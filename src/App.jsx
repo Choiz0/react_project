@@ -1,28 +1,26 @@
-import { About, Book, Error, Landing, NewsLetter, HomeLayout } from './pages';
+import {  Book, Error, Landing,  HomeLayout } from './pages';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
-import { loader as landingLoader } from './pages/Landing';
 import { loader as singleBookLoader } from './pages/Book';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout/>,
+    errorElement: <Error/>,
     children: [
-      {
-        path: "about", 
-        element: <About/>,
-      },
+      
       {
         index: true,
         element: <Landing/>,
-        loader: landingLoader,
+        
       },
-      {
-        path: "newsletter",
-        element: <NewsLetter/>,
-      },
+     
       {
         path: ":id",
         loader: singleBookLoader,
@@ -37,7 +35,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />; 
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  )
 }
 
 export default App;

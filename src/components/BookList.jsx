@@ -1,5 +1,5 @@
-import React from 'react'
 import BookCard from './BookCard';
+import defaultImage from '../assets/defaultImage.png';
 
 const BookList = ({books}) => {
     if(!books){
@@ -8,7 +8,7 @@ const BookList = ({books}) => {
     const renderedBooks = books.map(item => {
         const {id, volumeInfo} = item;
         const {title, authors, description, imageLinks} = volumeInfo;
-        const {smallThumbnail} = imageLinks;
+        const smallThumbnail = imageLinks  ?imageLinks.smallThumbnail : defaultImage;
         return {
             id,
             title,
