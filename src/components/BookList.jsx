@@ -3,7 +3,7 @@ import defaultImage from '../assets/defaultImage.png';
 
 const BookList = ({books}) => {
     if(!books){
-        return <div>No matching book found...</div>
+        return <div className='container'>No matching book found...</div>
     }
     const renderedBooks = books.map(item => {
         const {id, volumeInfo} = item;
@@ -13,6 +13,7 @@ const BookList = ({books}) => {
             id,
             title,
             authors,
+            publisher: volumeInfo.publisher,
             description,
             smallThumbnail
         }

@@ -3,36 +3,32 @@
   padding: 1rem;
 }
 
-.logo {
-  font-size: 1.8rem;
+.logo h1 {
+  padding-top: 1rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  color: #555;
+  color: var(--primary-700);
 }
 
-.page {
-  width: 90%;
-  margin: 0 auto;
-}
 .cardlist {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: flex-start;
-  margin-top: 5rem;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  gap: 1rem;
 }
 
 .card {
-  width: 300px;
-  height: 180px;
+  width: 330px;
+  height: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   position: relative;
   transition: transform 0.3s ease-in-out;
-  margin: 2rem;
+  margin: 1rem;
   background: #fff;
 }
 
@@ -45,21 +41,22 @@
   height: 150px;
   position: relative;
   top: -20px;
- left: 10px;
-margin-right: 1rem;
-
+  left: 10px;
+  margin-right: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .bookinfo {
-  padding: 0 0.5rem ;
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .bookinfo .title {
-  font-size: 1.2rem;
-
+  line-height: 1.1;
 }
 
 .bookinfo .authors {
@@ -69,11 +66,11 @@ margin-right: 1rem;
 
 .bookinfo .btn {
   text-align: center;
-   background: #00a4e4;
+
   color: #fff;
   text-decoration: none;
-  padding: 5px;
-  width: 100px;
+  padding: 0.5rem 1rem;
+  width: 150px;
   display: inline-block;
   border-radius: 5px;
   transition: background 0.3s;
@@ -83,34 +80,81 @@ margin-right: 1rem;
   background: #007bbd;
 }
 
-.form{
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem; 
 }
-.form input{
+.form input {
   width: 300px;
   height: 30px;
   border: 1px solid #ccc;
   padding: 0 1rem;
   border-radius: 5px;
 }
-.form button{
 
-
-  width: 100px;
-  height: 30px;
-  border: 1px solid #ccc;
-  padding: 0 1rem;
-   background: #00a4e4;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.form button:hover{
+.form button:hover {
   background: #007bbd;
   cursor: pointer;
   border-radius: 5px;
-  
+}
+.noResult {
+  width: 200px;
+}
+.bookdetail {
+  max-width: var(--max-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bookdetail .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.bookdetail .authors {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.bookdetail .publisher {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.bookdetail .subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.bookdetail .description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+.detailImg {
+  width: 200px;
+  height: 300px;
+  margin: 1rem;
+}
+.error {
+  max-width: var(--max-width);
+  background: var(--white);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  padding: 2rem 2.5rem;
+}
+.error h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
 }
